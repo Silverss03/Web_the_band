@@ -7,6 +7,7 @@
 
 /* Common CSS */
 html {
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -47,6 +48,10 @@ html {
     margin-top: 8px;
 }
 
+.mt16 {
+    margin-top: 16px;
+}
+
 .float-r {
     float: right;
 }
@@ -63,10 +68,6 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
-}
-
-#header,
-#header #nav_bar {
     height: 46.5px;
 }
 
@@ -122,14 +123,31 @@ html {
     top: -2px;
 }
 
+#header .menu-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#header .menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 23px;
 }
 
+#header .menu-icon,
 #header .search-icon {
     color: white;
     line-height: 46.5px;
+}
+
+#header .menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .menu-btn:hover .menu-icon {
+    color: black;
 }
 
 #header .search-btn:hover {
@@ -142,7 +160,7 @@ html {
 #slider {
     margin-top: 46.5px;
     padding-top: 50%;
-    background: url("/html_css_f8/W3_web_the_band/assests/img/chicago.jpg") top center / cover no-repeat;
+    background: url("../img/chicago.jpg") top center / cover no-repeat;
     position: relative;
 }
 
@@ -158,6 +176,7 @@ html {
     margin: 15px 0;
     font-weight: 700;
     font-size: 15px;
+    text-shadow: 0 0 1px black;
 }
 
 .picture-content .picture-title {
@@ -192,10 +211,12 @@ html {
     line-height: 1.6;
     text-align: justify;
     font-size: 15px;
+    margin: 15px 0;
 }
 
 #content .member-img {
     width: 154px;
+    margin-bottom: 16px;
 }
 
 #content .team-member {
@@ -242,9 +263,6 @@ html {
     margin-right: 16px;
 }
 
-.ticket-holder {
-    margin: 32px 0;
-}
 
 .ticket-holder .ticket-item {
     font-size: 15px;
@@ -285,6 +303,7 @@ html {
     background-color: black;
     margin: 16px 0;
     border: none;
+    -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -304,6 +323,14 @@ html {
 .contact-info p {
     font-size: 18px;
     line-height: 1.4;
+}
+
+.contact-info a {
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
 }
 
 .contact-form .form-control {
